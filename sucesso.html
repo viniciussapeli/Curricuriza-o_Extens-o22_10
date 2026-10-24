@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sucesso! - Jogo Educativo</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body class="bg-gradient-to-b from-sky-300 via-sky-200 to-emerald-200 min-h-screen flex flex-col justify-between overflow-x-hidden relative">
+        <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+            <div class="absolute -top-10 -left-10 w-40 h-40 bg-yellow-300 rounded-full sun-ray animate-spin-slow opacity-90"></div>
+            <div class="absolute top-8 left-1/4 text-white/80 text-6xl animate-float"><i class="fa-solid fa-cloud"></i></div>
+            <div class="absolute top-14 right-1/4 text-white/70 text-5xl animate-float" style="animation-delay: 1.5s;"><i class="fa-solid fa-cloud"></i></div>
+            <div class="absolute top-4 right-10 text-white/90 text-7xl animate-float" style="animation-delay: 2.5s;"><i class="fa-solid fa-cloud"></i></div>
+            <div class="absolute top-20 left-12 text-pink-400 text-4xl animate-float" style="animation-delay: 0.8s;"><i class="fa-solid fa-balloon"></i></div>
+            <div class="absolute top-32 right-16 text-yellow-400 text-3xl animate-float" style="animation-delay: 2s;"><i class="fa-solid fa-balloon"></i></div>
+            <div class="absolute bottom-0 left-0 right-0 h-32 bg-emerald-500 rounded-t-[50%] scale-x-125 translate-y-12 shadow-lg"></div>
+            <div class="absolute bottom-0 left-0 right-0 h-24 bg-green-600 rounded-t-[40%] scale-x-150 translate-y-8 opacity-80"></div>
+        </div>
+
+        <header class="relative z-10 w-full max-w-5xl mx-auto px-4 pt-4 flex justify-between items-center">
+            <button onclick="window.location.href='index.html'" class="flex items-center gap-2 bg-white/90 backdrop-blur hover:bg-white text-emerald-600 font-game px-4 py-2 rounded-2xl shadow-md transition transform active:scale-95 border-2 border-emerald-300">
+                <i class="fa-solid fa-house text-xl"></i>
+                <span class="hidden sm:inline">Início</span>
+            </button>
+        </header>
+
+        <main class="w-full flex flex-col items-center z-10 h-full justify-center">
+            <div id="screen-success" class="w-full max-w-md bg-white/95 backdrop-blur-md rounded-3xl p-6 sm:p-8 shadow-2xl border-4 border-emerald-400 text-center relative animate-fade-in my-auto">
+                <div class="absolute -top-12 left-1/2 -translate-x-1/2 flex gap-1 text-4xl">
+                    <span class="animate-bounce" style="animation-delay: 0.1s;">⭐</span>
+                    <span class="animate-bounce text-5xl" style="animation-delay: 0.3s;">⭐</span>
+                    <span class="animate-bounce" style="animation-delay: 0.2s;">⭐</span>
+                </div>
+
+                <div class="text-7xl mb-2 mt-4">🦁</div>
+                <h1 class="text-3xl sm:text-4xl font-game text-emerald-600 mb-1">PARABÉNS!</h1>
+                <p class="font-bold text-gray-600 text-lg mb-4">Você foi muito bem!</p>
+
+                <div class="bg-amber-50 border-2 border-amber-300 rounded-2xl p-4 my-4 shadow-inner">
+                    <p class="text-xs font-bold text-amber-700 uppercase">Você acertou:</p>
+                    <div class="text-4xl font-game text-amber-600 my-1" id="success-score">18</div>
+                    <p class="text-xs text-gray-500 font-semibold" id="success-total">de 20 perguntas!</p>
+                </div>
+
+                <p class="text-emerald-700 font-semibold text-sm mb-6 bg-emerald-50 p-3 rounded-xl border border-emerald-200">
+                    🌟 Você é um campeão! Continue assim!
+                </p>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <button onclick="window.location.href='quiz.html'" class="bg-amber-500 hover:bg-amber-600 text-white font-game p-3 rounded-2xl shadow border-b-4 border-amber-700 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-rotate-right"></i> Jogar de Novo
+                    </button>
+                    <button onclick="window.location.href='index.html'" class="bg-emerald-500 hover:bg-emerald-600 text-white font-game p-3 rounded-2xl shadow border-b-4 border-emerald-700 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-house"></i> Menu Inicial
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="relative z-10 text-center py-2 text-xs font-semibold text-emerald-900/80">
+            Jogo Educativo 2026 - Unifebe 
+        </footer>
+
+        <script src="js/questoes.js"></script>
+        <script src="js/nagavecao.js"></script>
+        <script src="js/jogo.js"></script>
+    </body>
+</html>

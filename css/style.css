@@ -1,0 +1,77 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+        
+.font-game {
+    font-family: 'Fredoka One', cursive;
+}
+
+/* Animações e Estilos Fofos Infantis */
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes bounce-gentle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.animate-bounce-gentle {
+    animation: bounce-gentle 2s infinite;
+}
+
+/* Modais com efeitos */
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #4ade80;
+    border-radius: 10px;
+}
+
+/* Efeito de Sol Radiante */
+    .sun-ray {
+    box-shadow: 0 0 40px #fde047;
+}
+
+/* Cartões interativos */
+.card-option {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-option:hover {
+    transform: translateY(-4px) scale(1.02);
+}
+.card-option:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Suporte a Drag and Drop no mobile */
+.draggable {
+    cursor: grab;
+    touch-action: none;
+}
+.draggable:active {
+    cursor: grabbing;
+}
+.dropzone-active {
+    border-color: #22c55e !important;
+    background-color: #f0fdf4 !important;
+}
